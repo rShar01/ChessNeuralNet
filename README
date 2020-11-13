@@ -1,0 +1,10 @@
+1.
+  given a board position, generate all possible moves and assign each a weighting
+2.
+  using a value network, generate best move (depth tbd)
+3.
+  compare the value of move it eventually decides is best against Magnus' move in that same situation
+  (I have 2000 of his games ready for this)
+4.
+  The value difference between Mangus' move and the ai's move is how much the weighting must be adjusted
+  (I have a function setup for evaluation loosely based on Stockfish's evaluation policy)
