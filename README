@@ -13,3 +13,8 @@ TODO:
 1. fix NoneType bug in feed_forward()
   possible issues: evaluation method is returning none (stockfish?)
                    weights @ piece_type is indexing wrong
+
+2. Implement additional layers
+  REQUIRED: pruning algorithm to adjust inputs to next layer (decision tree?)
+  REQUIRED: hidden layer evaluation policy
+  optional: extra layer deciding on hidden layer output before final out (improved backpropagation?)
