@@ -8,3 +8,8 @@
 4.
   The value difference between Mangus' move and the ai's move is how much the weighting must be adjusted
   (I have a function setup for evaluation loosely based on Stockfish's evaluation policy)
+
+TODO: 
+1. fix NoneType bug in feed_forward()
+  possible issues: evaluation method is returning none (stockfish?)
+                   weights @ piece_type is indexing wrong
