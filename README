@@ -1,13 +1,16 @@
 1.
   given a board position, generate all possible moves and assign each a weighting
+    - Monte Carlo Tree Search from first layer of possible moves to assign each weighting
 2.
   using a value network, generate best move (depth tbd)
+    - Simulate min(5, P(move = win) > 0.6)
 3.
   compare the value of move it eventually decides is best against Magnus' move in that same situation
   (I have 2000 of his games ready for this)
 4.
   The value difference between Mangus' move and the ai's move is how much the weighting must be adjusted
   (I have a function setup for evaluation loosely based on Stockfish's evaluation policy)
+    - perhaps change this so that the network chooses how to evaluate (more pure approach)
 
 TODO: 
 1. fix NoneType bug in feed_forward()
@@ -16,5 +19,6 @@ TODO:
 
 2. Implement additional layers
   REQUIRED: pruning algorithm to adjust inputs to next layer (decision tree?)
+            FIX: Monte Carlo Tree
   REQUIRED: hidden layer evaluation policy
   optional: extra layer deciding on hidden layer output before final out (improved backpropagation?)
