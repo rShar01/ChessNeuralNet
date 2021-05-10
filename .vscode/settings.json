@@ -1,6 +1,7 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
+    "python.linting.enabled": false,
     "python.linting.mypyEnabled": false,
-    "python.linting.pycodestyleEnabled": false
+    "python.linting.pycodestyleEnabled": false,
+    "python.pythonPath": "C:\\Users\\Ryan\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
 }

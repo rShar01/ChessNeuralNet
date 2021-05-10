@@ -6,9 +6,13 @@ import operator
 def activation(x):
     return 1 / (1 + np.exp(-x))
 
+def reLu(x):
+    return max(0, x)
+
 
 class NeuralNet:
     def __init__(self, current_board: chess.Board, color: bool):
+        # TODO: read and save as a JSON object?
         self.weights = {}
         self.weights[chess.PAWN] = np.random.rand()
         self.weights[chess.KNIGHT] = np.random.rand()
@@ -29,7 +33,7 @@ class NeuralNet:
         self.color = color
         self.layer = []
         self.results = {}
-        self.engine = chess.engine.SimpleEngine.popen_uci(r"C:\Users\Ryan\PycharmProjects\RealChessBot\stockfish_20090216_x64_bmi2.exe")
+        self.engine = chess.engine.SimpleEngine.popen_uci(r"C:\projects\RealChessBot\stockfish_20090216_x64_bmi2.exe")
         self.possible_moves = current_board.generate_legal_moves()
 
     def evaluate_current_pos(self, color, fen, move):

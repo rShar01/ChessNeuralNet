@@ -3,6 +3,7 @@ import chess
 
 pgn = open("Carlsen.pgn")
 
+# TODO: when ready, inputs from all games, not just Carlson
 
 class ReadBoard:
     def generate_moves(self):
