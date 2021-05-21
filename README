@@ -13,12 +13,7 @@
     - perhaps change this so that the network chooses how to evaluate (more pure approach)
 
 TODO: 
-1. fix NoneType bug in feed_forward()
-  possible issues: evaluation method is returning none (stockfish?)
-                   weights @ piece_type is indexing wrong
-
-2. Implement additional layers
-  REQUIRED: pruning algorithm to adjust inputs to next layer (decision tree?)
-            FIX: Monte Carlo Tree
-  REQUIRED: hidden layer evaluation policy
-  optional: extra layer deciding on hidden layer output before final out (improved backpropagation?)
+1. Create Value network
+  - Create training data --> choose random positions from downloaded games and their outcomes, use this as training and testing data
+  - Set up value network to take in a position and output a propbability [-1,1], negative = lose, positive = win, 0 = draw
+  
