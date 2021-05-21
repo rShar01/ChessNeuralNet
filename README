@@ -1,19 +1,17 @@
-1.
-  given a board position, generate all possible moves and assign each a weighting
-    - Monte Carlo Tree Search from first layer of possible moves to assign each weighting
-2.
-  using a value network, generate best move (depth tbd)
-    - Simulate min(5, P(move = win) > 0.6)
-3.
-  compare the value of move it eventually decides is best against Magnus' move in that same situation
-  (I have 2000 of his games ready for this)
-4.
-  The value difference between Mangus' move and the ai's move is how much the weighting must be adjusted
-  (I have a function setup for evaluation loosely based on Stockfish's evaluation policy)
-    - perhaps change this so that the network chooses how to evaluate (more pure approach)
+# Python Chess AI
+## What Does it do?
+- A chess algorithm designed to play chess mimicking the likes of Magnus Carlsen, Fabiano Caruana, and Vassily Ivanchuck
+- Uses a tensorflow (specifically Keras) model to evaluate any given position
+- Utilizes Monte Carlo Tree Search to search possible future moves and decide the best move given a position
 
-TODO: 
-1. Create Value network
-  - Create training data --> choose random positions from downloaded games and their outcomes, use this as training and testing data
-  - Set up value network to take in a position and output a propbability [-1,1], negative = lose, positive = win, 0 = draw
+## Why?
+- I wanted to learn more about machine learning and value models
+- I like and somewhat understand chess and wanted to generate a self-playing algorithm
+
+## Future steps / TODO:
+1. Finish Monte Carlo Search (Q learning?)
+2. Add UI
+
+
+
   
